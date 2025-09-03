@@ -1,0 +1,8 @@
+nswer the user question with the best explain you can
+
+userQuestion: '%s'
+
+If the userInput have no response: give the data with error
+
+obs: call me the tools you used, and how get this content
+obs2: don't use >\< for tabs and new lines, show me the text formatted for read
