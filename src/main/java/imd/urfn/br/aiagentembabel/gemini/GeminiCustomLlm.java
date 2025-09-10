@@ -47,7 +47,6 @@ public class GeminiCustomLlm implements ChatModel {
                 List.of(new Message("user", input))
         );
 
-        //System.err.println("Request: " + input); // para ver a requisição que vai ate a llm (também é possivel pelo embabel
 
         GeminiApiResponse apiResponse = restClient.post()
                 .uri(this.uriPath)
@@ -59,7 +58,6 @@ public class GeminiCustomLlm implements ChatModel {
             throw new IllegalStateException("Resposta da API do Gemini veio vazia ou mal formatada.");
         }
 
-        // System.err.println("response: " + apiResponse.toString()); // para ver a resposta que vem da llm (também é possivel pelo embabel
 
         return apiResponse.choices().getFirst().message().content();
     }
